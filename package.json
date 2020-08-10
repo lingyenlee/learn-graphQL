@@ -1,5 +1,5 @@
 {
-  "name": "graphql",
+  "name": "essentials",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,8 +18,16 @@
   },
   "homepage": "https://github.com/lingyenlee/learn-graphQL#readme",
   "dependencies": {
+    "casual": "^1.6.2",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.0.16",
+    "lodash": "^4.17.19",
+    "mongoose": "^5.9.28",
+    "nodemon": "^2.0.4",
+    "sequelize": "^6.3.4",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,6 +1,7 @@
 import express from "express"
-import graphqlHTTP from 'express-graphql'
-import schema from './schema'
+import { graphqlHTTP } from 'express-graphql';
+import { schema } from './data/schema'
+// import resolvers from "./resolvers"
 
 //create base server
 const app = express()
@@ -9,14 +10,13 @@ app.get("/", (req, res) => {
     res.send("GraphQL is amazing")
 })
 
-const root = { hello: () => "Hi, I am me" }
 
-app.use('graphql', graphqlHTTP({
+
+//create a path, pass the function schema into graphqlHTTP
+app.use('/graphql', graphqlHTTP({
     schema: schema,
-    rootValue: root,
-    graphiql: true
+    graphiql: true,
 }))
 
-
 const port = 5000
-app.listen(5000, () => console.log(`Running server on PORT ${port}`))
+app.listen(port, () => console.log(`Running server on port ${port}`));
